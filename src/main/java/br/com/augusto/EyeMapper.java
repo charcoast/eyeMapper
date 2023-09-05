@@ -70,6 +70,7 @@ public class EyeMapper<T> {
     public static String toJson(Map<String, Object> map){
         StringBuilder builder = new StringBuilder();
         builder.append("{");
+
         map.entrySet().forEach(e -> {
 
             Class type = e.getValue().getClass();
