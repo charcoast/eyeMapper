@@ -71,18 +71,17 @@ public class EyeMapper<T> {
         StringBuilder builder = new StringBuilder();
         builder.append("{");
 
-        map.entrySet().forEach(e -> {
+        map.forEach((key, value) -> {
 
-            Class type = e.getValue().getClass();
-            Object value = e.getValue();
-            System.out.println("Field: "+e.getKey() + " type: "+ type);
-            builder.append("\"").append(e.getKey()).append("\": ");
+            Class type = value.getClass();
+            System.out.println("Field: " + key + " type: " + type);
+            builder.append("\"").append(key).append("\": ");
 
             if (type.equals(String.class)) {
                 builder.append("\"").append(value).append("\"");
-            }else if(type.equals(Boolean.class)){
+            } else if (type.equals(Boolean.class)) {
                 builder.append(value);
-            }else{
+            } else {
                 builder.append(value);
             }
 
