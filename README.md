@@ -1,3 +1,3 @@
 # eyeMapper
 
-Um mapper semelhante ao Jackson
+Mapear JSON para Objeto
